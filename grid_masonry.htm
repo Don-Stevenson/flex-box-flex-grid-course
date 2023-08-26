@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Masonry Layout</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-size: 18px;
+        color: #fff;
+      }
+      div {
+        padding: 2rem;
+      }
+      div:nth-child(1) {
+        background-color: blueviolet;
+      }
+      div:nth-child(2) {
+        background-color: maroon;
+      }
+      div:nth-child(3) {
+        background-color: orange;
+      }
+      div:nth-child(4) {
+        background-color: teal;
+      }
+      div:nth-child(5) {
+        background-color: rgb(252, 0, 0);
+      }
+      div:nth-child(6) {
+        background-color: green;
+      }
+      div:nth-child(7) {
+        background-color: grey;
+      }
+      div:nth-child(8) {
+        background-color: goldenrod;
+      }
+      div:nth-child(9) {
+        background-color: rgb(251, 208, 192);
+      }
+      div:nth-child(10) {
+        background-color: chocolate;
+      }
+      div:nth-child(11) {
+        background-color: rgb(93, 148, 93);
+      }
+      div:nth-child(12) {
+        background-color: brown;
+      }
+      h1 {
+        color: #000;
+        margin-top: 1rem;
+      }
+      .container1 {
+        display: grid;
+        gap: 5px;
+        grid-template:
+          "side1 aside1 aside5 aside7" 200px
+          "side1 aside2 aside5 aside8" 200px
+          "side2 aside3 aside6 aside8" 200px
+          "side2 aside4 aside6 aside9" 200px
+          "side3 aside4 aside6 aside9" 200px/1fr 1fr 1fr 1fr;
+      }
+      .container1 div:nth-child(1) {
+        grid-area: side1;
+      }
+      .container1 div:nth-child(2) {
+        grid-area: side2;
+      }
+      .container1 div:nth-child(3) {
+        grid-area: side3;
+      }
+      .container1 div:nth-child(4) {
+        grid-area: aside1;
+      }
+      .container1 div:nth-child(5) {
+        grid-area: aside2;
+      }
+      .container1 div:nth-child(6) {
+        grid-area: aside3;
+      }
+      .container1 div:nth-child(7) {
+        grid-area: aside4;
+      }
+      .container1 div:nth-child(8) {
+        grid-area: aside5;
+      }
+      .container1 div:nth-child(9) {
+        grid-area: aside6;
+      }
+      .container1 div:nth-child(10) {
+        grid-area: aside7;
+      }
+      .container1 div:nth-child(11) {
+        grid-area: aside8;
+      }
+      .container1 div:nth-child(12) {
+        grid-area: aside9;
+      }
+      @media screen and (max-width: 600px) {
+        .container1 {
+          grid-template:
+            "side1 aside1 aside6" 200px
+            "side1 aside2 aside7" 200px
+            "side2 aside3 aside8" 200px
+            "side2 aside4 aside9" 200px
+            "side3 aside5 aside9" 200px/1fr 1fr 1fr;
+        }
+      }
+      @media screen and (max-width: 400px) {
+        .container1 {
+          grid-template:
+            "side1 aside4" 200px
+            "side2 aside5" 200px
+            "side3 aside6" 200px
+            "aside1 aside7" 200px
+            "aside2 aside8" 200px
+            "aside3 aside9" 200px/1fr 1fr;
+        }
+      }
+      @media screen and (max-width: 250px) {
+        .container1 {
+          grid-template:
+            "side1" 200px
+            "side2" 200px
+            "side3" 200px
+            "aside1" 200px
+            "aside2" 200px
+            "aside3" 200px
+            "aside4" 200px
+            "aside5" 200px
+            "aside6" 200px
+            "aside7" 200px
+            "aside8" 200px
+            "aside9" 200px/1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <span style="font-size: 40px; color: #000">Grid Masonry Layout</span>
+    <section class="container1">
+      <div>First</div>
+      <div>Second</div>
+      <div>Third</div>
+      <div>Forth</div>
+      <div>Fifth</div>
+      <div>Sixth</div>
+      <div>Seventh</div>
+      <div>Eigth</div>
+      <div>Ninth</div>
+      <div>Tenth</div>
+      <div>Eleventh</div>
+      <div>Twelfth</div>
+    </section>
+  </body>
+</html>

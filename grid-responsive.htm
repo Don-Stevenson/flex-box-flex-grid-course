@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Responsive</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-size: 18px;
+        color: #fff;
+      }
+      div {
+        padding: 2rem;
+      }
+      div:nth-child(1) {
+        background-color: blueviolet;
+      }
+      div:nth-child(2) {
+        background-color: maroon;
+      }
+      div:nth-child(3) {
+        background-color: orange;
+      }
+      div:nth-child(4) {
+        background-color: teal;
+      }
+      div:nth-child(5) {
+        background-color: hotpink;
+      }
+      div:nth-child(6) {
+        background-color: green;
+      }
+      div:nth-child(7) {
+        background-color: grey;
+      }
+      div:nth-child(8) {
+        background-color: goldenrod;
+      }
+      div:nth-child(9) {
+        background-color: coral;
+      }
+      div:nth-child(10) {
+        background-color: chocolate;
+      }
+      .container {
+        display: grid;
+        margin-bottom: 5px;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        grid-auto-rows: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <span style="font-size: 40px; color: #000">Flex grid responsive</span>
+    <section class="container">
+      <div>First</div>
+      <div>Second</div>
+      <div>Third</div>
+      <div>Fourth</div>
+      <div>Fifth</div>
+      <div>Sixth</div>
+      <div>Seven</div>
+      <div>Eight</div>
+      <div>Nine</div>
+      <div>Ten</div>
+    </section>
+    <section class="container">
+      <div>First</div>
+      <div>Second</div>
+      <div>Third</div>
+      <div>Fourth</div>
+      <div>Fifth</div>
+    </section>
+    <section class="container">
+      <div>First</div>
+      <div>Second</div>
+      <div>Third</div>
+    </section>
+    <section class="container">
+      <div>First</div>
+      <div>Second</div>
+      <div>Third</div>
+      <div>Fourth</div>
+      <div>Fifth</div>
+      <div>Sixth</div>
+      <div>Seven</div>
+      <div>Eight</div>
+      <div>Nine</div>
+      <div>Ten</div>
+    </section>
+  </body>
+</html>

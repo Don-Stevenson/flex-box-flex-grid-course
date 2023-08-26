@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Column Project</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .container1 {
+        display: flex;
+        flex-flow: column wrap;
+        height: 7.1rem;
+        background-color: black;
+      }
+      .color1 {
+        background-color: blue;
+        color: #fff;
+      }
+      .color2 {
+        background-color: crimson;
+        color: #fff;
+      }
+      .color3 {
+        background-color: teal;
+        color: #fff;
+      }
+      .color4 {
+        background-color: gold;
+        color: #fff;
+      }
+      .color5 {
+        background-color: peru;
+        color: #fff;
+      }
+      .half {
+        padding: 3rem;
+        width: 50%;
+        text-align: center;
+      }
+      .one-third {
+        padding: 3rem;
+        width: 33.33%;
+        text-align: center;
+      }
+      .full {
+        padding: 3rem;
+        width: 100%;
+        text-align: center;
+      }
+      .quarter {
+        padding: 3rem;
+        width: 25%;
+        text-align: center;
+      }
+      .fifth {
+        padding: 3rem;
+        width: 20%;
+        text-align: center;
+      }
+
+      @media screen and (max-width: 600px) {
+        .half,
+        .one-third,
+        .quarter,
+        .fifth,
+        .full {
+          width: 100%;
+        }
+        .container1 {
+          flex-flow: row wrap;
+          height: unset;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <span style="font-size: 40px; color: #000"
+      >Flex Columns Layout with columns</span
+    >
+    <section class="container1">
+      <div class="half color1">First</div>
+      <div class="half color2">Second</div>
+    </section>
+    <section class="container1">
+      <div class="one-third color3">First</div>
+      <div class="one-third color5">Second</div>
+      <div class="one-third color4">Third</div>
+    </section>
+    <section class="container1">
+      <div class="full color2">First</div>
+    </section>
+    <section class="container1">
+      <div class="quarter color1">First</div>
+      <div class="quarter color3">Second</div>
+      <div class="quarter color4">Third</div>
+      <div class="quarter color5">Fourth</div>
+    </section>
+    <section class="container1">
+      <div class="fifth color4">First</div>
+      <div class="fifth color5">Second</div>
+      <div class="fifth color1">Third</div>
+      <div class="fifth color2">Fourth</div>
+      <div class="fifth color3">Fifth</div>
+    </section>
+  </body>
+</html>
